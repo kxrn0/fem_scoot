@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import PseudoFooter from "./components/PseudoFooter/PseudoFooter";
 import Footer from "./components/Footer/Footer";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Switch>
         <Route path="/fem_scoot/">
           <Home />
+        </Route>
+        <Route path="/fem_scoot/about">
+          <About />
         </Route>
       </Switch>
       <PseudoFooter />

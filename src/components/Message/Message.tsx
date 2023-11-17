@@ -10,22 +10,22 @@ type Props = {
   arrow: {
     Icon: FunctionComponent;
     desktop: {
-      top: number;
-      right: number;
-      bottom: number;
-      left: number;
+      top: string;
+      right: string;
+      bottom: string;
+      left: string;
     };
     tablet: {
-      top: number;
-      right: number;
-      bottom: number;
-      left: number;
+      top: string;
+      right: string;
+      bottom: string;
+      left: string;
     };
     mobile: {
-      top: number;
-      right: number;
-      bottom: number;
-      left: number;
+      top: string;
+      right: string;
+      bottom: string;
+      left: string;
     };
   };
 };
