@@ -22,12 +22,28 @@ const SCApp = styled.div`
     font-size: 56px;
     line-height: 56px;
     letter-spacing: -2.5px;
+
+    &.scalable {
+      @media screen and (max-width: 690px) {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.8px;
+      }
+    }
   }
 
   .fs-h2 {
     font-size: 48px;
     line-height: 48px;
     letter-spacing: -2.1px;
+
+    &.scalable {
+      @media screen and (max-width: 600px) {
+        font-size: 32px;
+        line-height: 32px;
+        letter-spacing: -1.4px;
+      }
+    }
   }
 
   .fs-h3 {

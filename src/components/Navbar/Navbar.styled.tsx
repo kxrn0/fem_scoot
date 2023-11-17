@@ -30,10 +30,13 @@ const SCNavbar = styled.div`
 
     a {
       display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
+      @media screen and (max-width: 740px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     @media screen and (max-width: 740px) {
@@ -54,6 +57,7 @@ const SCNavbar = styled.div`
     pointer-events: none;
     transition: opacity var(--duration);
     display: none;
+    z-index: 3;
 
     @media screen and (max-width: 740px) {
       display: block;
@@ -108,7 +112,7 @@ const SCNavbar = styled.div`
       top: 0;
       left: 0;
       bottom: 0;
-      z-index: 1;
+      z-index: 3;
       transform: translate(-100%);
       transition: transform var(--duration);
 

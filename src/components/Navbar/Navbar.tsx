@@ -15,7 +15,7 @@ export default function Navbar() {
     return () => {
       document.body.style.overflowY = "";
     };
-  }, []);
+  }, [isOpen]);
 
   return (
     <SCNavbar>
