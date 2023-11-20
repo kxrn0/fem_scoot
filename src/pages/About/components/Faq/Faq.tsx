@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import SCFaq from "./Faq.styled.tsx";
 import IconChevronDown from "../../../../icons/IconChevronDown.tsx";
 
@@ -10,7 +10,7 @@ type Props = {
 export default function Faq({ name, questions }: Props) {
   const [isOpen, setIsOpen] = useState(questions.map(() => false));
 
-  function handle_change(event) {
+  function handle_change(event: ChangeEvent<HTMLInputElement>) {
     const target = event.target;
     const index = Number(target.dataset.index);
     const checked = target.checked;
