@@ -4,6 +4,7 @@ import IconX from "../../icons/IconX.tsx";
 import IconMenu from "../../icons/IconMenu.tsx";
 import Logo from "../../icons/Logo.tsx";
 import SCNavbar from "./Navbar.styled.tsx";
+import scroll_to_bottom from "../../utilities/scroll_to_bottom.ts";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,13 +50,9 @@ export default function Navbar() {
             Careers
           </Link>
         </div>
-        <a
-          className="button-primary"
-          href="https://4chan.org/g/catalog"
-          target="_blank"
-        >
+        <button className="button-primary" onClick={scroll_to_bottom}>
           Get Scootin
-        </a>
+        </button>
       </div>
     </SCNavbar>
   );

@@ -5,7 +5,7 @@ type Props = {
   title: string;
   description: string;
   image: string;
-  link: string;
+  link: { href: string; blank: boolean };
   reverse?: boolean;
   arrow: {
     Icon: FunctionComponent;
@@ -63,11 +63,15 @@ export default function Message({
           <h2 className="fs-h2 scalable">{title}</h2>
           <p className="fs-body-1">{description}</p>
         </div>
-        <a href={link} target="_blank" className="button-primary">
+        <a
+          href={link.href}
+          target={link.blank ? "_blank" : ""}
+          className="button-primary"
+        >
           Learn More
         </a>
       </div>
-      <img src={image} alt="" />
+      <img src={image} alt="background image" />
       <Icon />
     </SCMessage>
   );

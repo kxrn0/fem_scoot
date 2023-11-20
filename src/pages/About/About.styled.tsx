@@ -18,31 +18,26 @@ const SCAbout = styled.div`
     }
   }
 
-  .values {
+  .faqs {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 105px;
-    padding-top: 120px;
+    gap: 64px;
+    padding: 120px 0 40px 0;
 
     .fs-h2 {
       color: var(--dark-navy);
     }
 
-    .values-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-
-      @media screen and (max-width: 1000px) {
-        flex-direction: column;
-      }
+    @media screen and (max-width: 1250px) {
+      padding: 120px 40px;
+      padding-bottom: 0;
     }
 
     @media screen and (max-width: 500px) {
-      gap: 65px;
-      padding-right: 32px;
-      padding-left: 32px;
+      gap: 48px;
+      padding: 120px 32px;
+      padding-bottom: 0;
     }
   }
 `;

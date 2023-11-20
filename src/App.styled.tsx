@@ -10,6 +10,8 @@ const SCApp = styled.div`
   --light-yellow: #fff4df;
   --duration: 0.33s;
 
+  background: white;
+
   .fs-h1,
   .fs-h2,
   .fs-h3,
@@ -50,12 +52,28 @@ const SCApp = styled.div`
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -1.79px;
+
+    &.scalable {
+      @media screen and (max-width: 500px) {
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -1px;
+      }
+    }
   }
 
   .fs-h4 {
     font-size: 24px;
     line-height: 28px;
     letter-spacing: -1px;
+
+    &.scalable {
+      @media screen and (max-width: 500px) {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.8px;
+      }
+    }
   }
 
   .fs-body-1 {
@@ -72,13 +90,13 @@ const SCApp = styled.div`
   .button-primary {
     background: var(--yellow);
     color: white;
-    display: block;
+    display: grid;
+    place-items: center;
     text-decoration: none;
     font-family: soyjak;
     font-size: 15px;
     width: 180px;
     padding: 15px;
-    text-align: center;
     border: 3px solid var(--yellow);
     transition: background-color var(--duration), color var(--duration);
 
@@ -87,6 +105,34 @@ const SCApp = styled.div`
         background: transparent;
         color: var(--yellow);
       }
+    }
+  }
+
+  .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 105px;
+    padding-top: 120px;
+
+    .fs-h2 {
+      color: var(--dark-navy);
+    }
+
+    .values-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      gap: 65px;
+      padding-right: 32px;
+      padding-left: 32px;
     }
   }
 `;

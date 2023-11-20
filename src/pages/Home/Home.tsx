@@ -15,6 +15,7 @@ import { useMemo } from "react";
 import Instruction from "./components/Instruction/Instruction.tsx";
 import Message from "../../components/Message/Message.tsx";
 import IconArrowLeftDownward from "../../icons/IconArrowLeftDownward.tsx";
+import scroll_to_bottom from "../../utilities/scroll_to_bottom.ts";
 
 export default function Home() {
   const instructions = useMemo(
@@ -47,7 +48,7 @@ export default function Home() {
         description:
           "The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app.",
         image: telemetry,
-        link: "https://www.youtube.com/watch?v=7QgK28IkcuI",
+        link: { href: "/fem_scoot/about", blank: false },
         arrow: {
           Icon: IconArrowLeftDownward,
           desktop: {
@@ -76,7 +77,7 @@ export default function Home() {
           "Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23 cities over the coming year.",
         image: nearYou,
         reverse: true,
-        link: "https://www.youtube.com/watch?v=J4t4pMZBXZg",
+        link: { href: "/fem_scoot/location", blank: false },
         arrow: {
           Icon: IconArrowRight,
           desktop: {
@@ -104,7 +105,10 @@ export default function Home() {
         description:
           "Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app. Need to pay later? No worries! You can defer payment for up to a month.",
         image: payments,
-        link: "https://www.youtube.com/watch?v=aaqGyVmR5lM",
+        link: {
+          href: "/fem_scoot/about",
+          blank: false,
+        },
         arrow: {
           Icon: IconArrowLeftDownward,
           desktop: {
@@ -147,13 +151,9 @@ export default function Home() {
               in convenient locations in each of our cities. Use our app to
               locate the nearest bike, unlock it with a tap, and you’re away!
             </p>
-            <a
-              href="https://4chan.org/g/catalog"
-              target="_blank"
-              className="button-primary"
-            >
+            <button className="button-primary" onClick={scroll_to_bottom}>
               Get Scootin
-            </a>
+            </button>
           </div>
         </div>
         <IconLine />

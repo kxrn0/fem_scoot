@@ -5,7 +5,7 @@ import SCPseudoFooter from "./PseudoFooter.styled.tsx";
 
 export default function PseudoFooter() {
   return (
-    <SCPseudoFooter>
+    <SCPseudoFooter className="pseudofooter">
       <h2 className="fs-h2 scalable">Sign up and Scoot off today</h2>
       <div className="icons">
         <a href="https://www.youtube.com/watch?v=wFaYUl_b1Ns" target="_blank">
